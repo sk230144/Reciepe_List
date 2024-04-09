@@ -1,47 +1,117 @@
-/* RecipeDetailsPage.css */
+/* styles.css */
+
+/* Main container for recipe details */
 .recipe-details-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  border: solid 1px rgb(102, 101, 101);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+}
+
+/* Recipe title */
+.recipe-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Recipe information (ready time and servings) */
+.recipe-info {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Recipe source link */
+.recipe-source a {
+  color: #0074d9;
+  text-decoration: none;
+}
+
+.recipe-source a:hover {
+  text-decoration: underline;
+}
+
+/* Recipe image */
+.recipe-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Ingredients list */
+.ingredient-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.ingredient-list li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Instructions list */
+.instruction-list {
+  list-style-type: decimal;
+  margin-bottom: 20px;
+}
+
+.instruction-list li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Rating section */
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Rating input */
+input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Submit button */
+button[type="submit"] {
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.home-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #838586; /* Blue color, you can change it as needed */
+  color: #000000;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-bottom: 20px; /* Add margin to create space between the button and other elements */
+}
+
+.home-link:hover {
+  background-color: #fbfbfc; /* Darker shade of blue on hover */
+}
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .recipe-details-container {
+    padding: 10px;
   }
-  
-  .recipe-title {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .recipe-info {
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-  
-  .recipe-source {
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-  
-  .recipe-image {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  .section-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .ingredient-list,
-  .instruction-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .ingredient-list li,
-  .instruction-list li {
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-  
+}
